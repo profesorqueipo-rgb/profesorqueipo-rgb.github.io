@@ -15,17 +15,17 @@
 <style>
 :root{
   --bg:#ebe3cf; --bg2:#e2d8bf; --card:#f8f3e6; --ink:#22302a; --muted:#6b6656; --line:#cdbf9c;
-  --green:#2e5e45; --gold:#9a7420; --blue:#285a74; --rust:#97402c;
+  --green:#2e5e45; --gold:#9a7420; --blue:#285a74; --rust:#97402c;--plum:#6a3f86;
   --shadow:rgba(40,30,10,.14);
   --f-title:"Uncial Antiqua",Georgia,serif;
   --f-body:"Alegreya",Georgia,"Times New Roman",serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0f1714; --bg2:#131d19; --card:#18231e; --ink:#ebe4d1; --muted:#a8a28f; --line:#33443a;
-  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f; --shadow:rgba(0,0,0,.45); color-scheme:dark }}
+  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f;--plum:#c8a6e6; --shadow:rgba(0,0,0,.45); color-scheme:dark }}
 :root[data-theme="dark"]{
   --bg:#0f1714; --bg2:#131d19; --card:#18231e; --ink:#ebe4d1; --muted:#a8a28f; --line:#33443a;
-  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f; --shadow:rgba(0,0,0,.45); color-scheme:dark }
+  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f;--plum:#c8a6e6; --shadow:rgba(0,0,0,.45); color-scheme:dark }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -38,7 +38,7 @@ body{margin:0;color:var(--ink);font-family:var(--f-body);font-size:19px;line-hei
 a{color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .wrap{max-width:1000px;margin:0 auto}
-.c-green{--acc:var(--green)} .c-rust{--acc:var(--rust)} .c-blue{--acc:var(--blue)} .c-gold{--acc:var(--gold)} .c-muted{--acc:var(--muted)}
+.c-green{--acc:var(--green)} .c-rust{--acc:var(--rust)} .c-blue{--acc:var(--blue)} .c-gold{--acc:var(--gold)} .c-plum{--acc:var(--plum)} .c-muted{--acc:var(--muted)}
 
 /* banda de nudo celta */
 .banda{display:block;width:100%;height:24px;color:var(--acc,var(--gold))}
@@ -150,12 +150,22 @@ footer .lema{font-family:var(--f-title);font-size:20px;color:var(--green)}
 </header>
 
 <nav class="indice" aria-label="Secciones">
+  <a href="#eso1" class="c-plum">1º ESO</a>
   <a href="#eso4" class="c-green">4º ESO</a>
   <a href="#mat2" class="c-rust">Matemáticas II</a>
   <a href="#ccss2" class="c-blue">CCSS II</a>
   <a href="#personal" class="c-gold">Personal</a>
   <a href="#otros" class="c-muted" id="indice-otros" hidden>Otros</a>
 </nav>
+
+<section id="eso1" class="c-plum">
+  <div class="sec-cab"><svg class="mini" aria-hidden="true"><use href="#tri"/></svg><div><span class="nivel">1º ESO</span><h2>Matemáticas</h2></div></div>
+  <ul class="rejilla">
+    <li><div class="repo destacado" data-repo="apuntes"><span class="tipo">apuntes</span><a class="abrir" href="/apuntes/#eso1">Apuntes · curso completo</a><p class="desc">UP1 a UP4: números, proporcionalidad, álgebra y geometría, en web y PDF.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>código</a></div></div></li>
+    <li><div class="repo" data-repo="apuntes"><span class="tipo">ejercicios</span><a class="abrir" href="/apuntes/1eso-matematicas-coleccion.html">Colección de ejercicios</a><p class="desc">Ejercicios por tema con soluciones, en web y PDF.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>código</a></div></div></li>
+    <li><div class="repo" data-repo="apuntes"><span class="tipo">ejercicios</span><a class="abrir" href="/apuntes/#eso1">Cuadernillos UP1 a UP4</a><p class="desc">Apuntes y ejercicios de cada unidad para trabajar en clase.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>código</a></div></div></li>
+  </ul>
+</section>
 
 <section id="eso4" class="c-green">
   <div class="sec-cab"><svg class="mini" aria-hidden="true"><use href="#tri"/></svg><div><span class="nivel">4º ESO</span><h2>Matemáticas B</h2></div></div>
@@ -172,6 +182,7 @@ footer .lema{font-family:var(--f-title);font-size:20px;color:var(--green)}
   <div class="sec-cab"><svg class="mini" aria-hidden="true"><use href="#tri"/></svg><div><span class="nivel">2º Bachillerato</span><h2>Matemáticas II</h2></div></div>
   <ul class="rejilla">
     <li><div class="repo destacado" data-repo="apuntes"><span class="tipo">apuntes</span><a class="abrir" href="/apuntes/#mat2">Apuntes · curso completo</a><p class="desc">UP1 a UP4: álgebra, geometría, probabilidad y análisis, en web y PDF.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>código</a></div></div></li>
+    <li><div class="repo" data-repo="apuntes"><span class="tipo">ejercicios</span><a class="abrir" href="/apuntes/#mat2">Ejercicios del libro</a><p class="desc">Los 340 ejercicios de «Unas matemáticas para todos» por UP, con la solución del libro.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>código</a></div></div></li>
     <li><div class="repo" data-repo="determinantes"><span class="tipo">práctica</span><a class="abrir" href="/determinantes/">Determinantes</a><p class="desc">Práctica de operaciones, cálculos y propiedades de determinantes.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>código</a></div></div></li>
   </ul>
 </section>
