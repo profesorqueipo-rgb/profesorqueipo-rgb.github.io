@@ -15,17 +15,17 @@
 <style>
 :root{
   --bg:#ebe3cf; --bg2:#e2d8bf; --card:#f8f3e6; --ink:#22302a; --muted:#6b6656; --line:#cdbf9c;
-  --green:#2e5e45; --gold:#9a7420; --blue:#285a74; --rust:#97402c;--plum:#6a3f86;
+  --green:#2e5e45; --gold:#9a7420; --blue:#285a74; --rust:#97402c;--plum:#6a3f86;--teal:#23706f;
   --shadow:rgba(40,30,10,.14);
   --f-title:"Uncial Antiqua",Georgia,serif;
   --f-body:"Alegreya",Georgia,"Times New Roman",serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0f1714; --bg2:#131d19; --card:#18231e; --ink:#ebe4d1; --muted:#a8a28f; --line:#33443a;
-  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f;--plum:#c8a6e6; --shadow:rgba(0,0,0,.45); color-scheme:dark }}
+  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f;--plum:#c8a6e6;--teal:#84cfc9; --shadow:rgba(0,0,0,.45); color-scheme:dark }}
 :root[data-theme="dark"]{
   --bg:#0f1714; --bg2:#131d19; --card:#18231e; --ink:#ebe4d1; --muted:#a8a28f; --line:#33443a;
-  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f;--plum:#c8a6e6; --shadow:rgba(0,0,0,.45); color-scheme:dark }
+  --green:#8cc6a4; --gold:#dcbc66; --blue:#8bbcd8; --rust:#e3977f;--plum:#c8a6e6;--teal:#84cfc9; --shadow:rgba(0,0,0,.45); color-scheme:dark }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -38,7 +38,7 @@ body{margin:0;color:var(--ink);font-family:var(--f-body);font-size:19px;line-hei
 a{color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .wrap{max-width:1000px;margin:0 auto}
-.c-green{--acc:var(--green)} .c-rust{--acc:var(--rust)} .c-blue{--acc:var(--blue)} .c-gold{--acc:var(--gold)} .c-plum{--acc:var(--plum)} .c-muted{--acc:var(--muted)}
+.c-green{--acc:var(--green)} .c-rust{--acc:var(--rust)} .c-blue{--acc:var(--blue)} .c-gold{--acc:var(--gold)} .c-plum{--acc:var(--plum)} .c-teal{--acc:var(--teal)} .c-muted{--acc:var(--muted)}
 
 /* banda de nudo celta */
 .banda{display:block;width:100%;height:24px;color:var(--acc,var(--gold))}
@@ -152,6 +152,7 @@ footer .lema{font-family:var(--f-title);font-size:20px;color:var(--green)}
 <nav class="indice" aria-label="Seiciones">
   <a href="#eso1" class="c-plum">1u ESO</a>
   <a href="#eso4" class="c-green">4u ESO</a>
+  <a href="#mat1" class="c-teal">Matemátiques I</a>
   <a href="#mat2" class="c-rust">Matemátiques II</a>
   <a href="#ccss2" class="c-blue">CCSS II</a>
   <a href="#personal" class="c-gold">Personal</a>
@@ -175,6 +176,13 @@ footer .lema{font-family:var(--f-title);font-size:20px;color:var(--green)}
     <li><div class="repo" data-repo="radicales"><span class="tipo">práutica</span><a class="abrir" href="/radicales/">Radicales</a><p class="desc">Exercicios con radicales.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>códigu</a></div></div></li>
     <li><div class="repo" data-repo="logaritmos"><span class="tipo">práutica</span><a class="abrir" href="/logaritmos/">Logaritmos</a><p class="desc">Práutica de logaritmos. 4u ESO</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>códigu</a></div></div></li>
     <li><div class="repo antiguo" data-repo="apuntes-4eso-matB"><span class="tipo">versión anterior</span><a class="abrir" href="/apuntes-4eso-matB/">apuntes-4eso-matB</a><p class="desc">Primera web d'apuntes de 4u ESO, yá incluyida n'«apuntes».</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>códigu</a></div></div></li>
+  </ul>
+</section>
+
+<section id="mat1" class="c-teal">
+  <div class="sec-cab"><svg class="mini" aria-hidden="true"><use href="#tri"/></svg><div><span class="nivel">1u Bachilleratu</span><h2>Matemátiques I</h2></div></div>
+  <ul class="rejilla">
+    <li><div class="repo destacado" data-repo="apuntes"><span class="tipo">apuntes</span><a class="abrir" href="/apuntes/#mat1">Apuntes · cursu completu</a><p class="desc">UP1 a UP4: álxebra y trigonometría, xeometría, funciones y probabilidá, en web y PDF.</p><div class="pie-repo"><span class="fecha"></span><a class="codigo" hidden>códigu</a></div></div></li>
   </ul>
 </section>
 
